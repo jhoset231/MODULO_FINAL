@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import pandas as pd
 
-# Generar un reporte de ventas
+
 def generar_reporte_ventas(nombre_archivo):
     print(" Generando reporte de ventas...")
     datos = {
@@ -17,7 +17,6 @@ def generar_reporte_ventas(nombre_archivo):
     print(f"✅ Reporte de ventas '{nombre_archivo}' generado correctamente.")
     return nombre_archivo
 
-# Generar un nuevo reporte de ventas con descuento aplicado
 def generar_reporte_ventas_descuento(nombre_archivo):
     print("ℹ️ Generando reporte de ventas con descuento...")
     datos = {
@@ -31,7 +30,6 @@ def generar_reporte_ventas_descuento(nombre_archivo):
     print(f"✅ Reporte de ventas con descuento '{nombre_archivo}' generado correctamente.")
     return nombre_archivo
 
-# Función para enviar correos
 def enviar_correo(servidor_smtp, puerto_smtp, correo_remitente, clave_remitente, correo_destinatario, asunto, cuerpo, ruta_archivo=None):
     try:
         print("SMTP (Simple Mail Transfer Protocol) es el protocolo usado para enviar correos electrónicos.")
@@ -96,5 +94,5 @@ def menu():
         else:
             print("❌ Opción no válida. Inténtalo de nuevo.")
 
-# Ejecutar el menú
+
 menu()
